@@ -8,10 +8,11 @@
 <body>
   <div id="root" > </div>
   <script>
+
     const root = document.getElementById('root');
 
 
-    // const h1Conponent = () => {
+    //const h1Conponent = () => {
     //   return "<h1> 백지언 입니당</h1>";
 
     // };
@@ -50,10 +51,25 @@ render(); // innerHTML 넣어줘
 
   </script>
 
-  <!--  굳이 innerHTML 써도 될 것을 펑션 여러개 돌려서 하는것 = 리액트의 전반적인 과정 -->
+   굳이 innerHTML 써도 될 것을 펑션 여러개 돌려서 하는것 = 리액트의 전반적인 과정 -->
   <!-- 조립은 app 펑션에서 그리는 것은 render 에서 -->
-</body>
+<!-- </body>
 </html>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- 강사 코드랑 비교해서 문자열 나오는거 확인 -->
 
@@ -90,7 +106,6 @@ render(); // innerHTML 넣어줘
 </body>
 </html> -->
 
- -->
 
 
 
@@ -107,6 +122,8 @@ render(); // innerHTML 넣어줘
 
 
 
+
+    
 
 
 
@@ -121,7 +138,12 @@ render(); // innerHTML 넣어줘
 </head>
 <body>
   <div id="root" > </div>
+
+  <script src = "tagComponent.js"></script>
   <script>
+  
+
+
     const root = document.getElementById('root');
 
 
@@ -130,10 +152,11 @@ render(); // innerHTML 넣어줘
 
     // };
 
-    const tagConponent = (tagName, textNode) => {
-      return `<${tagname}>${textNode} </$(tagname)>`;
 
-    };
+    // work-2.js 에서 tagComponent 객체가 없다고 치자. ( tagComponent.js 에서)
+    // const tagComponent = (tagName, textNode) => {
+    //   return `<${tagName}>${textNode}</${tagName}>`;
+    // };
 
 
     // const app = () => {
@@ -141,35 +164,135 @@ render(); // innerHTML 넣어줘
 
     // }
 
-    const app = () => {
-      return `
-      ${h1Component("공욱재입니다")}
-      ${h1Component("최유진입니다")}
-      ${h1Component("유호영입니다")}
-      `;
+    // const app = () => {
+    //   return `
+    //   ${h1Component("공욱재입니다")}
+    //   ${h1Component("최유진입니다")}
+    //   ${h1Component("유호영입니다")}
+    //   `;
       // 하나 틀 만들고 여러번 쓸 수 있는 가성비
       // innerHTML 자체가 Parser 라서 render는 그리기만 할 뿐
 
+
+
+      //네임즈 객체 중에서 for문 돌려서 내 이름만  h1 태그로 만들고 나머지는 p 태그로 생성되게 만들기
+      //  힌트 : 리턴 / 스트링
+      // foreach push join 쓰면 굿 
+      const names = [
+  "구하림",
+  "김보미",
+  "김수현",
+  "김정수",
+  "문혜림",
+  "배성빈",
+  "백지원",
+  "송이현",
+  "신지윤",
+  "유으뜸",
+  "유호영",
+  "이연승",
+  "이재영",
+  "이종수",
+  "임유진",
+  "정호연",
+  "조우식",
+  "조자연",
+  "최유진",
+  "황재민"
+];
+
+
+
+  // const h1Conponent = (textNode) => {
+  //     return `<h1> ${textNode} </h1>`;
+
+  //   };
+
+const tagging = () => {
+  for (let i = 0; i < names.length; i++) {
+    if(names[i] === "백지원") {
+        return "백지원";
+      }
     }
+  }
+
+
+  function result () {
+
+  
+    let name = tagging();
+    return "<h1>",name,"</h1>";
+
+  }
+
+
+console.log(result());
+
+
+
+   // const app = () => {
+    //   return `${h1.component()}`;
+
+    // }
+
+    // 백지원 리턴하는 함수
+
+
+
+
+
+
+
+
+
+
       // console.log(app()); // * 왜 문자열로 안나와...
 
 
-const render = () => {
-  root.innerHTML = app();
-  // * innerHTML은 내장되어있는 DOM API이다
-}
+// const render = () => {
+//   root.innerHTML = app();
+//   // * innerHTML은 내장되어있는 DOM API이다
+// }
 
-render(); // innerHTML 넣어줘
+// render(); // innerHTML 넣어줘
 
 
   </script>
-
-  <!--  굳이 innerHTML 써도 될 것을 펑션 여러개 돌려서 하는것 = 리액트의 전반적인 과정 -->
-  <!-- 조립은 app 펑션에서 그리는 것은 render 에서 -->
 </body>
 </html>
 
-<!-- 강사 코드랑 비교해서 문자열 나오는거 확인 -->
+  <!--  굳이 innerHTML 써도 될 것을 펑션 여러개 돌려서 하는것 = 리액트의 전반적인 과정 -->
+  <!-- 조립은 app 펑션에서 그리는 것은 render 에서
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+강사 코드랑 비교해서 문자열 나오는거 확인 -->
 
 <!-- 
 <!DOCTYPE html>
