@@ -1,0 +1,205 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root" > </div>
+  <script>
+    const root = document.getElementById('root');
+
+
+    // const h1Conponent = () => {
+    //   return "<h1> 백지언 입니당</h1>";
+
+    // };
+
+    const h1Conponent = (textNode) => {
+      return `<h1> ${textNode} </h1>`;
+
+    };
+
+
+    // const app = () => {
+    //   return `${h1.component()}`;
+
+    // }
+
+    const app = () => {
+      return `
+      ${h1Component("공욱재입니다")}
+      ${h1Component("최유진입니다")}
+      ${h1Component("유호영입니다")}
+      `;
+      // 하나 틀 만들고 여러번 쓸 수 있는 가성비
+      // innerHTML 자체가 Parser 라서 render는 그리기만 할 뿐
+
+    }
+      // console.log(app()); // * 왜 문자열로 안나와...
+
+
+const render = () => {
+  root.innerHTML = app();
+  // * innerHTML은 내장되어있는 DOM API이다
+}
+
+render(); // innerHTML 넣어줘
+
+
+  </script>
+
+  <!--  굳이 innerHTML 써도 될 것을 펑션 여러개 돌려서 하는것 = 리액트의 전반적인 과정 -->
+  <!-- 조립은 app 펑션에서 그리는 것은 render 에서 -->
+</body>
+</html>
+
+<!-- 강사 코드랑 비교해서 문자열 나오는거 확인 -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    const root = document.getElementById('root');
+
+
+    const h1Component = () => {
+      return `<h1>공욱재입니다</h1>`;
+    };
+
+    const app = () => {
+      return `${h1Component()}`;
+    }
+
+    const render = () => {
+      root.innerHTML = app();
+    }
+
+    render();
+
+
+  </script>
+</body>
+</html> -->
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root" > </div>
+  <script>
+    const root = document.getElementById('root');
+
+
+    // const h1Conponent = () => {
+    //   return "<h1> 백지언 입니당</h1>";
+
+    // };
+
+    const tagConponent = (tagName, textNode) => {
+      return `<${tagname}>${textNode} </$(tagname)>`;
+
+    };
+
+
+    // const app = () => {
+    //   return `${h1.component()}`;
+
+    // }
+
+    const app = () => {
+      return `
+      ${h1Component("공욱재입니다")}
+      ${h1Component("최유진입니다")}
+      ${h1Component("유호영입니다")}
+      `;
+      // 하나 틀 만들고 여러번 쓸 수 있는 가성비
+      // innerHTML 자체가 Parser 라서 render는 그리기만 할 뿐
+
+    }
+      // console.log(app()); // * 왜 문자열로 안나와...
+
+
+const render = () => {
+  root.innerHTML = app();
+  // * innerHTML은 내장되어있는 DOM API이다
+}
+
+render(); // innerHTML 넣어줘
+
+
+  </script>
+
+  <!--  굳이 innerHTML 써도 될 것을 펑션 여러개 돌려서 하는것 = 리액트의 전반적인 과정 -->
+  <!-- 조립은 app 펑션에서 그리는 것은 render 에서 -->
+</body>
+</html>
+
+<!-- 강사 코드랑 비교해서 문자열 나오는거 확인 -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    const root = document.getElementById('root');
+
+
+    const h1Component = () => {
+      return `<h1>공욱재입니다</h1>`;
+    };
+
+    const app = () => {
+      return `${h1Component()}`;
+    }
+
+    const render = () => {
+      root.innerHTML = app();
+    }
+
+    render();
+
+
+  </script>
+</body>
+</html> -->
